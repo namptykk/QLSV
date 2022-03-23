@@ -42,7 +42,7 @@ namespace QuanLyHocSinh
         private void btnQLSV_Click(object sender, EventArgs e)
         {
             closeOpeningForm();
-            QLSV f = new QLSV() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+            NhapSinhVien f = new NhapSinhVien() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
             f.FormBorderStyle = (FormBorderStyle)0;
             tableDisplay.Controls.Add(f);
             f.Show();

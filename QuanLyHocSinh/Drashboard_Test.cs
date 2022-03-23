@@ -39,8 +39,6 @@ namespace QuanLyHocSinh
         private void menuChangePassword_Click(object sender, EventArgs e)
         {
             Form new_mdi_child = new ChangePassword();
-            //new_mdi_child.Text = "Cửa sổ con MDI";
-            //new_mdi_child.MdiParent = this;
             new_mdi_child.Show();
         }
 
@@ -51,8 +49,6 @@ namespace QuanLyHocSinh
             {
                 this.Hide();
                 Form new_mdi_child = new fLogin();
-                //new_mdi_child.Text = "Cửa sổ con MDI";
-                //new_mdi_child.MdiParent = this;
                 new_mdi_child.Show();
             }
            
@@ -67,14 +63,15 @@ namespace QuanLyHocSinh
             Console.WriteLine(getUsername);
             dt = db.GetData($"SELECT * FROM [StudentManagement].[dbo].[User] WHERE USERNAME ='{getUsername}' AND isAdmin ='Y'");
             if (dt.Rows.Count > 0)
-            {
                 menuAccount.Enabled = true;
-            }
             else
-            { 
                 menuAccount.Enabled = false;
-                
-            }
+        }
+
+        private void menuNhapSinhVien_Click(object sender, EventArgs e)
+        {
+            Form new_mdi_child = new NhapSinhVien();
+            new_mdi_child.Show();
         }
     }
 }
