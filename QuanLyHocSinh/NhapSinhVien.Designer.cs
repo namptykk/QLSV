@@ -49,7 +49,7 @@
             this.btnUpload = new System.Windows.Forms.Button();
             this.pictureAvatar = new System.Windows.Forms.PictureBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
@@ -76,7 +76,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbGioiTinh);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtMaLop);
@@ -92,7 +92,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(132, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 221);
+            this.groupBox1.Size = new System.Drawing.Size(268, 221);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
@@ -126,7 +126,7 @@
             // 
             this.txtTenSV.Location = new System.Drawing.Point(100, 52);
             this.txtTenSV.Name = "txtTenSV";
-            this.txtTenSV.Size = new System.Drawing.Size(222, 20);
+            this.txtTenSV.Size = new System.Drawing.Size(151, 20);
             this.txtTenSV.TabIndex = 2;
             // 
             // label5
@@ -246,24 +246,24 @@
             // 
             this.openFile.FileName = "openFileDialog1";
             // 
-            // comboBox1
+            // cbGioiTinh
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ",
             "Khác"});
-            this.comboBox1.Location = new System.Drawing.Point(100, 78);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(66, 21);
-            this.comboBox1.TabIndex = 8;
+            this.cbGioiTinh.Location = new System.Drawing.Point(100, 78);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(66, 21);
+            this.cbGioiTinh.TabIndex = 8;
             // 
             // NhapSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(491, 314);
+            this.ClientSize = new System.Drawing.Size(408, 314);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnFinish);
@@ -306,6 +306,6 @@
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.OpenFileDialog openFile;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
     }
 }
