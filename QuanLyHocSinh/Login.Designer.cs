@@ -46,7 +46,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(393, 53);
+            this.label1.Location = new System.Drawing.Point(217, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 44);
             this.label1.TabIndex = 1;
@@ -54,14 +54,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(398, 127);
+            this.txtUsername.Location = new System.Drawing.Point(222, 116);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(198, 21);
             this.txtUsername.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(398, 176);
+            this.txtPassword.Location = new System.Drawing.Point(222, 165);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(198, 21);
@@ -70,7 +70,7 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(398, 254);
+            this.btnLogin.Location = new System.Drawing.Point(222, 243);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(198, 30);
             this.btnLogin.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             this.linkForgetPassword.AutoSize = true;
             this.linkForgetPassword.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkForgetPassword.Location = new System.Drawing.Point(398, 204);
+            this.linkForgetPassword.Location = new System.Drawing.Point(222, 193);
             this.linkForgetPassword.Name = "linkForgetPassword";
             this.linkForgetPassword.Size = new System.Drawing.Size(105, 18);
             this.linkForgetPassword.TabIndex = 3;
@@ -94,7 +94,7 @@
             // 
             this.linkRegister.AutoSize = true;
             this.linkRegister.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkRegister.Location = new System.Drawing.Point(398, 229);
+            this.linkRegister.Location = new System.Drawing.Point(222, 218);
             this.linkRegister.Name = "linkRegister";
             this.linkRegister.Size = new System.Drawing.Size(57, 18);
             this.linkRegister.TabIndex = 4;
@@ -106,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(398, 106);
+            this.label2.Location = new System.Drawing.Point(222, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 6;
@@ -116,7 +116,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(398, 155);
+            this.label3.Location = new System.Drawing.Point(222, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 6;
@@ -125,7 +125,7 @@
             // btnCloseApp
             // 
             this.btnCloseApp.Image = global::QuanLyHocSinh.Properties.Resources.CloseApp;
-            this.btnCloseApp.Location = new System.Drawing.Point(637, 1);
+            this.btnCloseApp.Location = new System.Drawing.Point(457, 3);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(20, 20);
             this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,13 +135,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::QuanLyHocSinh.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(84, 98);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::QuanLyHocSinh.Properties.Resources.HUTECH;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 110);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 186);
+            this.pictureBox1.Size = new System.Drawing.Size(175, 76);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // fLogin
@@ -149,7 +149,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(660, 367);
+            this.ClientSize = new System.Drawing.Size(481, 295);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCloseApp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,7 +160,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fLogin";
@@ -173,8 +173,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
@@ -184,6 +182,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox btnCloseApp;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

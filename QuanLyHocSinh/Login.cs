@@ -51,7 +51,7 @@ namespace QuanLyHocSinh
             {
                 MessageBox.Show($"Đăng nhập với tài khoản [{getUsername}] thành công !");
                 globalUsername = txtUsername.Text;
-                var DrashBoard = new Drashboard_Test();
+                var DrashBoard = new MainForm();
                 DrashBoard.Show();
                 this.Hide();
 

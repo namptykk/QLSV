@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QuanLyHocSinh
 {
-    public partial class Drashboard_Test : Form
+    public partial class MainForm : Form
     {
-        public Drashboard_Test()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -51,7 +51,6 @@ namespace QuanLyHocSinh
                 Form new_mdi_child = new fLogin();
                 new_mdi_child.Show();
             }
-           
         }
 
 
@@ -63,15 +62,32 @@ namespace QuanLyHocSinh
             Console.WriteLine(getUsername);
             dt = db.GetData($"SELECT * FROM [StudentManagement].[dbo].[User] WHERE USERNAME ='{getUsername}' AND isAdmin ='Y'");
             if (dt.Rows.Count > 0)
+            {
+                menuNhapSinhVien.Enabled = true;
                 menuAccount.Enabled = true;
+                menuDiem.Enabled = true;
+                menuDanhSachSinhVien.Enabled = true;
+            }
+                
             else
+            {
+                menuNhapSinhVien.Enabled = false;
                 menuAccount.Enabled = false;
+                menuDiem.Enabled = false;
+                menuDanhSachSinhVien.Enabled = false;
+            }
+                
         }
 
         private void menuNhapSinhVien_Click(object sender, EventArgs e)
         {
             Form new_mdi_child = new NhapSinhVien();
             new_mdi_child.Show();
+        }
+
+        private void khoaLớpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
