@@ -39,7 +39,8 @@ namespace QuanLyHocSinh
             List<String> listValue = getValue();
 
             String query = $"INSERT INTO [StudentManagement].[dbo].[SinhVien](MaSinhVien,TenSinhVien,GioiTinh,NgaySinh,QueQuan,SDT,MaLop,HinhAnh) " +
-                $"  VALUES('{MSSV}','{listValue[1]}','{listValue[2]}','{listValue[3]}','{listValue[4]}','{listValue[5]}','{listValue[6]}','{pathSaveImage}')";
+                $"  VALUES('{MSSV}',N'{listValue[1]}',N'{listValue[2]}',N'{listValue[3]}',N'{listValue[4]}',N'{listValue[5]}',N'{listValue[6]}','{pathSaveImage}')";
+            Console.Write(query);
             db.UpdateData(query,"Thêm sinh viên thành công !");
             clearValue();
 

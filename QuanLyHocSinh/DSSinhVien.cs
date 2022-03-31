@@ -139,7 +139,7 @@ namespace QuanLyHocSinh
             DialogResult dialogResult = MessageBox.Show("Bạn có muốn thực thi?", "Thông báo", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                query = $"UPDATE [StudentManagement].[dbo].[SinhVien] SET TENSINHVIEN = '{txtTenSV.Text}', GIOITINH = '{txtGioiTinh.Text}', NGAYSINH = '{txtNgaySinh.Text}', QUEQUAN = '{txtQueQuan.Text}', SDT = '{txtSDT.Text}', MALOP = '{txtMaLop.Text}' " +
+                query = $"UPDATE [StudentManagement].[dbo].[SinhVien] SET TENSINHVIEN = N'{txtTenSV.Text}', GIOITINH = N'{txtGioiTinh.Text}', NGAYSINH = '{txtNgaySinh.Text}', QUEQUAN = N'{txtQueQuan.Text}', SDT = '{txtSDT.Text}', MALOP = '{txtMaLop.Text}' " +
                     $"WHERE MaSinhVien ='{txtMaSV.Text}'";
                 Database db = new Database();
                 db.UpdateData(query);
