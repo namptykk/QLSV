@@ -87,6 +87,10 @@ namespace QuanLyHocSinh
                 db.UpdateData(query);
                 LoadData();
             }
+            if(dgvDisplay.Rows.Count < 1)
+            {
+                clearTextbox();
+            }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -115,6 +119,19 @@ namespace QuanLyHocSinh
             txtSDT.Enabled = true;
             txtMaLop.Enabled = true;
             txtChuyenNganh.Enabled = true;
+        }
+
+        void clearTextbox()
+        {
+            txtMaSV.Text = "";
+            txtTenSV.Text = "";
+            txtGioiTinh.Text = "";
+            txtNgaySinh.Text = "";
+            txtQueQuan.Text = "";
+            txtSDT.Text = "";
+            txtMaLop.Text = "";
+            txtChuyenNganh.Text = "";
+            pictureAvatar.Image = null;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -182,6 +199,41 @@ namespace QuanLyHocSinh
             {
                 Bitmap bm = new Bitmap(im);
                 return bm;
+            }
+        }
+
+        private void radioMaSV_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tìm kiếm theo mã sinh viên !");
+            txtFindMSV.ReadOnly = false;
+            txtFindTenSV.ReadOnly = true;
+            btnSearch.Text = "Hủy bỏ";
+        }
+
+        private void radioTenSV_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tìm kiếm theo tên sinh viên !");
+            txtFindMSV.ReadOnly = true;
+            txtFindTenSV.ReadOnly = false;
+            btnSearch.Text = "Hủy bỏ";
+        }
+
+        private void radioMaSV_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(btnSearch.Text == "Hủy bỏ")
+            {
+                txtFindTenSV.Text = "";
+                txtFindMSV.Text = "";
+                radioMaSV.Checked = false;
+                radioTenSV.Checked = false;
+                txtFindMSV.ReadOnly = true;
+                txtFindTenSV.ReadOnly = true;
+                btnSearch.Text = "Tìm kiếm";
             }
         }
     }

@@ -51,8 +51,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtFindTenSV = new System.Windows.Forms.TextBox();
             this.txtFindMSV = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioTenSV = new System.Windows.Forms.RadioButton();
+            this.radioMaSV = new System.Windows.Forms.RadioButton();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAddSinhVien = new System.Windows.Forms.Button();
@@ -261,6 +261,7 @@
             // 
             // dgvDisplay
             // 
+            this.dgvDisplay.AllowUserToAddRows = false;
             this.dgvDisplay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDisplay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSinhVien,
@@ -285,13 +286,14 @@
             this.btnSearch.TabIndex = 17;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txtFindTenSV);
             this.groupBox3.Controls.Add(this.txtFindMSV);
-            this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioTenSV);
+            this.groupBox3.Controls.Add(this.radioMaSV);
             this.groupBox3.Controls.Add(this.btnSearch);
             this.groupBox3.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(731, 51);
@@ -311,36 +313,38 @@
             // 
             // txtFindMSV
             // 
-            this.txtFindMSV.Enabled = false;
             this.txtFindMSV.Location = new System.Drawing.Point(27, 44);
             this.txtFindMSV.Name = "txtFindMSV";
             this.txtFindMSV.ReadOnly = true;
             this.txtFindMSV.Size = new System.Drawing.Size(161, 22);
             this.txtFindMSV.TabIndex = 14;
             // 
-            // radioButton2
+            // radioTenSV
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(6, 75);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(136, 20);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tìm theo tên sinh viên";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioTenSV.AutoSize = true;
+            this.radioTenSV.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioTenSV.Location = new System.Drawing.Point(6, 75);
+            this.radioTenSV.Name = "radioTenSV";
+            this.radioTenSV.Size = new System.Drawing.Size(136, 20);
+            this.radioTenSV.TabIndex = 15;
+            this.radioTenSV.TabStop = true;
+            this.radioTenSV.Text = "Tìm theo tên sinh viên";
+            this.radioTenSV.UseVisualStyleBackColor = true;
+            this.radioTenSV.Click += new System.EventHandler(this.radioTenSV_Click);
             // 
-            // radioButton1
+            // radioMaSV
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(6, 24);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(135, 20);
-            this.radioButton1.TabIndex = 13;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tìm theo mã sinh viên";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioMaSV.AutoSize = true;
+            this.radioMaSV.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioMaSV.Location = new System.Drawing.Point(6, 24);
+            this.radioMaSV.Name = "radioMaSV";
+            this.radioMaSV.Size = new System.Drawing.Size(135, 20);
+            this.radioMaSV.TabIndex = 13;
+            this.radioMaSV.TabStop = true;
+            this.radioMaSV.Text = "Tìm theo mã sinh viên";
+            this.radioMaSV.UseVisualStyleBackColor = true;
+            this.radioMaSV.CheckedChanged += new System.EventHandler(this.radioMaSV_CheckedChanged);
+            this.radioMaSV.Click += new System.EventHandler(this.radioMaSV_Click);
             // 
             // btnEdit
             // 
@@ -516,8 +520,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioTenSV;
+        private System.Windows.Forms.RadioButton radioMaSV;
         private System.Windows.Forms.Button btnAddSinhVien;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
