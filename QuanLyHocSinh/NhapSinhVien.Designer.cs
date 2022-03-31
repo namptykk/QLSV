@@ -35,8 +35,6 @@
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtQueQuan = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -51,7 +49,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
-            this.txtChuyenNganh = new System.Windows.Forms.TextBox();
+            this.cbMaLop = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -70,7 +68,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.pictureAvatar);
-            this.groupBox2.Location = new System.Drawing.Point(12, 56);
+            this.groupBox2.Location = new System.Drawing.Point(8, 56);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(114, 125);
             this.groupBox2.TabIndex = 13;
@@ -87,12 +85,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtChuyenNganh);
+            this.groupBox1.Controls.Add(this.cbMaLop);
             this.groupBox1.Controls.Add(this.cbGioiTinh);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtMaLop);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.txtQueQuan);
             this.groupBox1.Controls.Add(this.label7);
@@ -105,7 +101,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(132, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 240);
+            this.groupBox1.Size = new System.Drawing.Size(268, 215);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin cá nhân";
@@ -137,22 +133,6 @@
             this.label9.Size = new System.Drawing.Size(70, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "Số điện thoại";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 214);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chuyên ngành";
-            // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Location = new System.Drawing.Point(100, 183);
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(100, 20);
-            this.txtMaLop.TabIndex = 7;
             // 
             // label8
             // 
@@ -224,7 +204,8 @@
             // 
             this.txtMaSV.Location = new System.Drawing.Point(100, 27);
             this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(66, 20);
+            this.txtMaSV.ReadOnly = true;
+            this.txtMaSV.Size = new System.Drawing.Size(116, 20);
             this.txtMaSV.TabIndex = 1;
             // 
             // label3
@@ -238,7 +219,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(131, 302);
+            this.btnAdd.Location = new System.Drawing.Point(132, 277);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 9;
@@ -248,12 +229,13 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(212, 302);
+            this.btnClear.Location = new System.Drawing.Point(213, 277);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 10;
             this.btnClear.Text = "Nhập lại";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnUpload
             // 
@@ -269,19 +251,20 @@
             // 
             this.openFile.FileName = "openFileDialog1";
             // 
-            // txtChuyenNganh
+            // cbMaLop
             // 
-            this.txtChuyenNganh.Location = new System.Drawing.Point(99, 209);
-            this.txtChuyenNganh.Name = "txtChuyenNganh";
-            this.txtChuyenNganh.Size = new System.Drawing.Size(152, 20);
-            this.txtChuyenNganh.TabIndex = 8;
+            this.cbMaLop.FormattingEnabled = true;
+            this.cbMaLop.Location = new System.Drawing.Point(99, 182);
+            this.cbMaLop.Name = "cbMaLop";
+            this.cbMaLop.Size = new System.Drawing.Size(152, 21);
+            this.cbMaLop.TabIndex = 7;
             // 
             // NhapSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(407, 331);
+            this.ClientSize = new System.Drawing.Size(407, 305);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnAdd);
@@ -292,6 +275,7 @@
             this.Name = "NhapSinhVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập thông tin sinh viên";
+            this.Load += new System.EventHandler(this.NhapSinhVien_Load);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureAvatar)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -306,7 +290,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtQueQuan;
         private System.Windows.Forms.Label label7;
@@ -325,7 +308,6 @@
         private System.Windows.Forms.PictureBox pictureAvatar;
         private System.Windows.Forms.OpenFileDialog openFile;
         private System.Windows.Forms.ComboBox cbGioiTinh;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtChuyenNganh;
+        private System.Windows.Forms.ComboBox cbMaLop;
     }
 }

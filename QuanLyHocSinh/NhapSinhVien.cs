@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace QuanLyHocSinh
 {
@@ -17,7 +18,6 @@ namespace QuanLyHocSinh
         { 
             InitializeComponent();
         }
-
         private void btnUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -26,31 +26,98 @@ namespace QuanLyHocSinh
                 
                 fileName = dlg.FileName;
                 pictureAvatar.Image = Image.FromFile(fileName);
+                
             }
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            List<String> listValue = getValue();
+          
             Database db = new Database();
-            String getImagePath = pictureAvatar.ImageLocation;
+            String MSSV = getMSSV();
+            string pathSaveImage = @"D:\TEST\QLSV\QuanLyHocSinh\Image 3x4\" + MSSV + Path.GetExtension(fileName);
+    
+            List<String> listValue = getValue();
+
             String query = $"INSERT INTO [StudentManagement].[dbo].[SinhVien](MaSinhVien,TenSinhVien,GioiTinh,NgaySinh,QueQuan,SDT,MaLop,HinhAnh) " +
-                $"  VALUES('{listValue[0]}','{listValue[1]}','{listValue[2]}','{listValue[3]}','{listValue[4]}','{listValue[5]}','{listValue[6]}','{fileName}')";
-            db.UpdateData(query);
-            Console.WriteLine(query);
+                $"  VALUES('{MSSV}','{listValue[1]}','{listValue[2]}','{listValue[3]}','{listValue[4]}','{listValue[5]}','{listValue[6]}','{pathSaveImage}')";
+            db.UpdateData(query,"Thêm sinh viên thành công !");
+            clearValue();
+
+            // Move file image
+            pictureAvatar.Image = null;
+            if (File.Exists(fileName) == true)
+            {
+                File.Copy(fileName, pathSaveImage,true);
+            }
+
+
+            txtMaSV.Text = getMSSV();
+            pictureAvatar.Image = null;
+            
+        }
+        private void NhapSinhVien_Load(object sender, EventArgs e)
+        {
+            String MSSV = getMSSV();
+            txtMaSV.Text = MSSV;
+            addMaLop();
+        }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clearValue();
+            txtMaSV.Text = getMSSV();
+            pictureAvatar.Image = null;
         }
 
+
+        // CUSTOM FUNCTION
+            // Get value from textbox
         List<String> getValue()
         {
             List<Control> listTextbox = new List<Control>()
-            {txtMaSV,txtTenSV,cbGioiTinh,txtNgaySinh,txtQueQuan,txtSDT,txtMaLop};
+            {txtMaSV,txtTenSV,cbGioiTinh,txtNgaySinh,txtQueQuan,txtSDT,cbMaLop};
 
             List<String> listValue = new List<string>();
-            foreach(Control ct in listTextbox)
+            foreach (Control ct in listTextbox)
             {
                 listValue.Add(ct.Text);
             }
             return listValue;
         }
+            // Clear value in textbox
+        void clearValue()
+        {
+            List<Control> listTextbox = new List<Control>()
+            {txtMaSV,txtTenSV,cbGioiTinh,txtNgaySinh,txtQueQuan,txtSDT,cbMaLop};
+
+            List<String> listValue = new List<string>();
+            foreach (Control ct in listTextbox)
+            {
+                ct.Text = "";
+            }
+            pictureAvatar.Image = null;
+        }
+            // Count Student -> Return new Student ID
+        String getMSSV()
+        {
+            String MSSV = "SV00000000";
+            Database db = new Database();
+            DataTable dt = db.GetData("SELECT * FROM [StudentManagement].[dbo].[SinhVien]");
+            int countRow = dt.Rows.Count + 1;
+            MSSV = MSSV.Substring(0, MSSV.Length - countRow.ToString().Length) + countRow.ToString();
+            Console.WriteLine(MSSV);
+
+            return MSSV;
+        }
+            // Get list of Class ID
+        void addMaLop()
+        {
+            Database db = new Database();
+            DataTable dt = db.GetData("SELECT * FROM [StudentManagement].[dbo].[Lop]");
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbMaLop.Items.Add(dr[0].ToString());
+            }
+        }
+        // END CUSTOM FUNCTION
     }
 }

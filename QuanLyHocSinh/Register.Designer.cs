@@ -77,6 +77,7 @@
             this.groupBox1.Size = new System.Drawing.Size(428, 233);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnRedo
             // 
@@ -119,7 +120,7 @@
             this.txtPasswordAgain.Location = new System.Drawing.Point(141, 99);
             this.txtPasswordAgain.Name = "txtPasswordAgain";
             this.txtPasswordAgain.PasswordChar = '*';
-            this.txtPasswordAgain.Size = new System.Drawing.Size(246, 24);
+            this.txtPasswordAgain.Size = new System.Drawing.Size(183, 24);
             this.txtPasswordAgain.TabIndex = 3;
             // 
             // txtPassword
@@ -127,14 +128,14 @@
             this.txtPassword.Location = new System.Drawing.Point(141, 69);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(246, 24);
+            this.txtPassword.Size = new System.Drawing.Size(183, 24);
             this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(141, 40);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(246, 24);
+            this.txtUsername.Size = new System.Drawing.Size(183, 24);
             this.txtUsername.TabIndex = 1;
             // 
             // label6
@@ -143,9 +144,9 @@
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(21, 161);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 17);
+            this.label6.Size = new System.Drawing.Size(80, 17);
             this.label6.TabIndex = 0;
-            this.label6.Text = "Email";
+            this.label6.Text = "Địa chỉ Email";
             // 
             // label5
             // 
@@ -153,9 +154,9 @@
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(21, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(45, 17);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Full name";
+            this.label5.Text = "Họ tên";
             // 
             // label4
             // 
@@ -163,9 +164,9 @@
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 17);
+            this.label4.Size = new System.Drawing.Size(109, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Re-enter password";
+            this.label4.Text = "Nhập lại mật khẩu";
             // 
             // label3
             // 
@@ -173,9 +174,9 @@
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(60, 17);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Password";
+            this.label3.Text = "Mật khẩu";
             // 
             // label2
             // 
@@ -183,9 +184,9 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Username";
+            this.label2.Text = "Tài khoản";
             // 
             // btnCloseApp
             // 

@@ -52,7 +52,7 @@ namespace QuanLyHocSinh
             return dt;
         }
 
-        public void UpdateData(string query)
+        public void UpdateData(string query, string status)
         {
             try
             { 
@@ -63,9 +63,31 @@ namespace QuanLyHocSinh
                 SqlDataAdapter adpt = new SqlDataAdapter(cmd);
                 cmd.ExecuteNonQuery();
                 CloseConnection();
-                MessageBox.Show("Record inserted successfully");
+                if(status != "")
+                    MessageBox.Show(status);
+                else
+                    MessageBox.Show("Record inserted successfully");
             }
             catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+
+        }
+        public void UpdateData(string query)
+        {
+            try
+            {
+
+                OpenConection();
+                SqlCommand cmd = new SqlCommand(query, con);
+
+                SqlDataAdapter adpt = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                MessageBox.Show("Record inserted successfully");
+            }
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString());
             }

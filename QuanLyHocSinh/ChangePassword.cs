@@ -29,8 +29,8 @@ namespace QuanLyHocSinh
             if (dt.Rows.Count > 0)
             {
                 Console.WriteLine($"UPDATE [StudentManagement].[dbo].[User] SET PASSWORD = '{getNewPassword}' WHERE USERNAME = {getUsername}");
-                db.UpdateData($"UPDATE [StudentManagement].[dbo].[User] SET PASSWORD = '{getNewPassword}' WHERE USERNAME = '{getUsername}'");
-                MessageBox.Show($"Đổi mật khẩu thành công !");
+                db.UpdateData($"UPDATE [StudentManagement].[dbo].[User] SET PASSWORD = '{getNewPassword}' WHERE USERNAME = '{getUsername}'","Đổi mật khẩu thành công !");
+
             }
             else
             {
@@ -40,7 +40,6 @@ namespace QuanLyHocSinh
             txtUsername.Text = "";
             txtPassword.Text = "";
             txtNewPassword.Text = "";
-
         }
     }
 }

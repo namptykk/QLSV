@@ -42,7 +42,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(333, 142);
+            this.label2.Location = new System.Drawing.Point(271, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 16;
@@ -51,9 +51,9 @@
             // btnConfirm
             // 
             this.btnConfirm.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(427, 179);
+            this.btnConfirm.Location = new System.Drawing.Point(365, 138);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(198, 30);
+            this.btnConfirm.Size = new System.Drawing.Size(198, 25);
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "Xác nhận";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(427, 141);
+            this.txtUsername.Location = new System.Drawing.Point(365, 112);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(198, 20);
             this.txtUsername.TabIndex = 9;
@@ -70,7 +70,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(328, 81);
+            this.label1.Location = new System.Drawing.Point(290, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 44);
             this.label1.TabIndex = 10;
@@ -79,7 +79,7 @@
             // btnCloseApp
             // 
             this.btnCloseApp.Image = global::QuanLyHocSinh.Properties.Resources.CloseApp;
-            this.btnCloseApp.Location = new System.Drawing.Point(649, 12);
+            this.btnCloseApp.Location = new System.Drawing.Point(595, 2);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(20, 20);
             this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,9 +91,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox1.Image = global::QuanLyHocSinh.Properties.Resources.Login;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 57);
+            this.pictureBox1.Location = new System.Drawing.Point(22, 23);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 186);
+            this.pictureBox1.Size = new System.Drawing.Size(198, 183);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 301);
+            this.ClientSize = new System.Drawing.Size(617, 232);
             this.Controls.Add(this.btnCloseApp);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnConfirm);

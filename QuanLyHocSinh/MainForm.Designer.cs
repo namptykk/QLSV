@@ -34,16 +34,15 @@
             this.menuChangePassword = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAccount = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuNhapSinhVien = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDiem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDanhSachSinhVien = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.khoaLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchKhoaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchLớpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchMônHọcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.danhSáchHệĐàoTạoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -95,44 +94,25 @@
             // quảnLýSinhViênToolStripMenuItem
             // 
             this.quảnLýSinhViênToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuNhapSinhVien,
-            this.menuDiem,
-            this.menuDanhSachSinhVien});
+            this.menuDanhSachSinhVien,
+            this.menuDiem});
             this.quảnLýSinhViênToolStripMenuItem.Name = "quảnLýSinhViênToolStripMenuItem";
             this.quảnLýSinhViênToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.quảnLýSinhViênToolStripMenuItem.Text = "Sinh viên";
-            // 
-            // menuNhapSinhVien
-            // 
-            this.menuNhapSinhVien.Name = "menuNhapSinhVien";
-            this.menuNhapSinhVien.Size = new System.Drawing.Size(180, 22);
-            this.menuNhapSinhVien.Text = "Thêm sinh viên";
-            this.menuNhapSinhVien.Click += new System.EventHandler(this.menuNhapSinhVien_Click);
             // 
             // menuDiem
             // 
             this.menuDiem.Name = "menuDiem";
             this.menuDiem.Size = new System.Drawing.Size(180, 22);
-            this.menuDiem.Text = "Điểm số";
+            this.menuDiem.Text = "Kết quả học tập";
             this.menuDiem.Click += new System.EventHandler(this.menuDiem_Click);
             // 
             // menuDanhSachSinhVien
             // 
             this.menuDanhSachSinhVien.Name = "menuDanhSachSinhVien";
-            this.menuDanhSachSinhVien.Size = new System.Drawing.Size(179, 22);
+            this.menuDanhSachSinhVien.Size = new System.Drawing.Size(180, 22);
             this.menuDanhSachSinhVien.Text = "Danh sách sinh viên";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::QuanLyHocSinh.Properties.Resources.HUTECH;
-            this.pictureBox1.Location = new System.Drawing.Point(185, 261);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.menuDanhSachSinhVien.Click += new System.EventHandler(this.menuDanhSachSinhVien_Click);
             // 
             // khoaLớpToolStripMenuItem
             // 
@@ -149,32 +129,44 @@
             // danhSáchKhoaToolStripMenuItem
             // 
             this.danhSáchKhoaToolStripMenuItem.Name = "danhSáchKhoaToolStripMenuItem";
-            this.danhSáchKhoaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.danhSáchKhoaToolStripMenuItem.Text = "Danh sách khoa";
+            this.danhSáchKhoaToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.danhSáchKhoaToolStripMenuItem.Text = "Khoa";
             // 
             // danhSáchLớpToolStripMenuItem
             // 
             this.danhSáchLớpToolStripMenuItem.Name = "danhSáchLớpToolStripMenuItem";
-            this.danhSáchLớpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.danhSáchLớpToolStripMenuItem.Text = "Danh sách lớp";
+            this.danhSáchLớpToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.danhSáchLớpToolStripMenuItem.Text = "Lớp";
             // 
             // danhSáchMônHọcToolStripMenuItem
             // 
             this.danhSáchMônHọcToolStripMenuItem.Name = "danhSáchMônHọcToolStripMenuItem";
-            this.danhSáchMônHọcToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.danhSáchMônHọcToolStripMenuItem.Text = "Danh sách môn học";
+            this.danhSáchMônHọcToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.danhSáchMônHọcToolStripMenuItem.Text = "Môn học";
             // 
             // danhSáchHệĐàoTạoToolStripMenuItem
             // 
             this.danhSáchHệĐàoTạoToolStripMenuItem.Name = "danhSáchHệĐàoTạoToolStripMenuItem";
-            this.danhSáchHệĐàoTạoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.danhSáchHệĐàoTạoToolStripMenuItem.Text = "Danh sách hệ đào tạo";
+            this.danhSáchHệĐàoTạoToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.danhSáchHệĐàoTạoToolStripMenuItem.Text = "Hệ đào tạo";
             // 
             // trợGiúpToolStripMenuItem
             // 
             this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
             this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::QuanLyHocSinh.Properties.Resources.HUTECH;
+            this.pictureBox1.Location = new System.Drawing.Point(185, 261);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(303, 115);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -205,7 +197,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuChangePassword;
         private System.Windows.Forms.ToolStripMenuItem menuAccount;
         private System.Windows.Forms.ToolStripMenuItem quảnLýSinhViênToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuNhapSinhVien;
         private System.Windows.Forms.ToolStripMenuItem menuDiem;
         private System.Windows.Forms.ToolStripMenuItem menuDanhSachSinhVien;
         private System.Windows.Forms.PictureBox pictureBox1;

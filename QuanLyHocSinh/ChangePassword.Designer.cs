@@ -106,9 +106,9 @@
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 17);
+            this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 0;
-            this.label4.Text = "New password";
+            this.label4.Text = "Mật khẩu mới";
             // 
             // label3
             // 
@@ -116,9 +116,9 @@
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.Size = new System.Drawing.Size(76, 17);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Old password";
+            this.label3.Text = "Mật khẩu cũ";
             // 
             // label2
             // 
@@ -126,9 +126,9 @@
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 17);
+            this.label2.Size = new System.Drawing.Size(62, 17);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Username";
+            this.label2.Text = "Tài khoản";
             // 
             // ChangePassword
             // 

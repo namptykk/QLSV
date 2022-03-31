@@ -140,12 +140,14 @@ namespace QuanLyHocSinh
                     btnEdit.Enabled = true;
                     btnDelete.Enabled = true;
                     btnAdd.Text = "Thêm";
+
                 }
                 if(getStatus == "Update")
                 {
                     query = $"UPDATE [StudentManagement].[dbo].[User] SET Username = '{txtUsername.Text}', Password='{txtPassword.Text}', " +
                                 $"Fullname='{txtFullname.Text}', Email='{txtEmail.Text}', isAdmin='{getChecked}' WHERE ID = '{txtID.Text}'";
                     btnEdit.Text = "Sửa";
+     
                 }
                 db.UpdateData(query);
                 LoadData();

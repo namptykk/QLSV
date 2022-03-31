@@ -71,7 +71,8 @@ namespace QuanLyHocSinh
                         // Insert data into database
                         query = $"INSERT into[StudentManagement].[dbo].[User](Username, Password, FullName, Email, CreatedDate) " +
                                         $"VALUES('{txtUsername.Text}', '{txtPassword.Text}', '{txtFullName.Text}', '{txtEmail.Text}', getdate())";
-                        db.UpdateData(query);
+                        db.UpdateData(query, "Tạo tài khoản thành công !");
+                         clearValue();
                     }
                     else
                         MessageBox.Show("Tài khoản này đã tồn tại trong hệ thống !", "Thông báo", MessageBoxButtons.OK);
@@ -79,11 +80,16 @@ namespace QuanLyHocSinh
             }
             else
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK);
-
+            clearValue();
 
         }
 
         private void btnRedo_Click(object sender, EventArgs e)
+        {
+            clearValue();
+        }
+
+        void clearValue()
         {
             List<TextBox> inputList = new List<TextBox>();
             inputList.Add(txtUsername);
@@ -97,5 +103,10 @@ namespace QuanLyHocSinh
                 tb.Text = "";
             }
         }
-    }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+    }   
 }

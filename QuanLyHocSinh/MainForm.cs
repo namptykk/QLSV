@@ -63,7 +63,7 @@ namespace QuanLyHocSinh
             dt = db.GetData($"SELECT * FROM [StudentManagement].[dbo].[User] WHERE USERNAME ='{getUsername}' AND isAdmin ='Y'");
             if (dt.Rows.Count > 0)
             {
-                menuNhapSinhVien.Enabled = true;
+               
                 menuAccount.Enabled = true;
                 menuDiem.Enabled = true;
                 menuDanhSachSinhVien.Enabled = true;
@@ -71,7 +71,7 @@ namespace QuanLyHocSinh
                 
             else
             {
-                menuNhapSinhVien.Enabled = false;
+                
                 menuAccount.Enabled = false;
                 menuDiem.Enabled = false;
                 menuDanhSachSinhVien.Enabled = false;
@@ -88,6 +88,12 @@ namespace QuanLyHocSinh
         private void khoaLớpToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void menuDanhSachSinhVien_Click(object sender, EventArgs e)
+        {
+            Form new_mdi_child = new DSSinhVien();
+            new_mdi_child.Show();
         }
     }
 }
